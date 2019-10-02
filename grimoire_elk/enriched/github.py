@@ -679,7 +679,7 @@ class GitHubEnrich(Enrich):
 
         assignee = None
 
-        if issue['assignee'] is not None:
+        if issue['assignee'] is not None and issue['assignee_data']:
             assignee = issue['assignee_data']
             rich_issue['assignee_login'] = issue['assignee']['login']
             rich_issue['assignee_name'] = assignee['name']
