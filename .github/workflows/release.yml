@@ -57,6 +57,7 @@ jobs:
           peodd -o requirements-dev.txt
           pip install -r requirements-dev.txt
           pip install setuptools==57.5.0
+          pip install pip==20.0.1
           pip install --upgrade wheel
 
       - name: Verify Elasticsearch connection
@@ -75,8 +76,7 @@ jobs:
       - name: Test package
         run: |
           PACKAGE=`(cd dist && ls *whl)` && echo $PACKAGE
-          pip install numpy
-          pip install --pre ./dist/$PACKAGE
+          pip install --pre ./dist/$PACKAGE\[mysql,sortinghat\]
           cd tests && python run_tests.py
 
   release:
