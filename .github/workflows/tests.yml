@@ -50,6 +50,7 @@ jobs:
       run: |
         poetry run pip install setuptools==57.5.0
         poetry install -vvv
+        poetry run pip install -r requirements_dev.txt
         poetry add -D coveralls
     - name: Verify Elasticsearch connection
       run: |
