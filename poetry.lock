@@ -48,18 +48,17 @@ lxml = ["lxml"]
 
 [[package]]
 name = "cereslib"
-version = "0.2.0"
+version = "0.1.16"
 description = "GrimoireLab: Unify, eventize and enrich information from Perceval"
 category = "main"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "*"
 
 [package.dependencies]
-grimoirelab-toolkit = ">=0.2.0,<0.3.0"
+grimoire-elk = ">=0.30.23"
 numpy = "<=1.18.3"
-pandas = ">=0.22.0,<=0.25.3"
-scipy = ">=1.5,<2.0"
-six = ">=1.16.0,<2.0.0"
+scipy = "*"
+six = "*"
 
 [[package]]
 name = "certifi"
@@ -112,7 +111,7 @@ toml = ["toml"]
 
 [[package]]
 name = "cryptography"
-version = "37.0.2"
+version = "3.4.8"
 description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
 category = "main"
 optional = false
@@ -123,11 +122,11 @@ cffi = ">=1.12"
 
 [package.extras]
 docs = ["sphinx (>=1.6.5,!=1.8.0,!=3.1.0,!=3.1.1)", "sphinx-rtd-theme"]
-docstest = ["pyenchant (>=1.6.11)", "twine (>=1.12.0)", "sphinxcontrib-spelling (>=4.0.1)"]
+docstest = ["doc8", "pyenchant (>=1.6.11)", "twine (>=1.12.0)", "sphinxcontrib-spelling (>=4.0.1)"]
 pep8test = ["black", "flake8", "flake8-import-order", "pep8-naming"]
-sdist = ["setuptools_rust (>=0.11.4)"]
+sdist = ["setuptools-rust (>=0.11.4)"]
 ssh = ["bcrypt (>=3.1.5)"]
-test = ["pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,!=3.79.2)"]
+test = ["pytest (>=6.0)", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,!=3.79.2)"]
 
 [[package]]
 name = "dill"
@@ -284,11 +283,11 @@ pylint = ">=1.8.4"
 
 [[package]]
 name = "grimoirelab-toolkit"
-version = "0.2.0"
+version = "0.3.0"
 description = "Toolkit of common functions used across GrimoireLab"
 category = "main"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
 python-dateutil = ">=2.8.0,<3.0.0"
@@ -464,74 +463,77 @@ python-versions = ">=2.6"
 
 [[package]]
 name = "perceval"
-version = "0.17.17"
-description = "Fetch data from software repositories"
+version = "0.18.0"
+description = "Send Sir Perceval on a quest to fetch and gather data from software repositories."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-beautifulsoup4 = ">=4.3.2"
-cryptography = ">=3.3.1"
-dulwich = ">=0.20.0"
-feedparser = ">=5.1.3"
-grimoirelab-toolkit = ">=0.1.4"
-PyJWT = ">=1.7.1"
-python-dateutil = ">=2.6.0"
-requests = ">=2.7.0"
-urllib3 = ">=1.22"
+beautifulsoup4 = ">=4.3.2,<5.0.0"
+cryptography = ">=3.3.2,<4.0.0"
+dulwich = ">=0.20.0,<0.21.0"
+feedparser = ">=6.0.8,<7.0.0"
+grimoirelab-toolkit = ">=0.3,<0.4"
+PyJWT = ">=2.4.0,<3.0.0"
+python-dateutil = ">=2.6.0,<3.0.0"
+requests = ">=2.7.0,<3.0.0"
+urllib3 = ">=1.26,<2.0"
+
+[package.extras]
+docs = ["myst-parser (>=0.15.2,<0.16.0)", "furo (>=2021.8.31,<2022.0.0)"]
 
 [[package]]
 name = "perceval-mozilla"
-version = "0.2.15"
-description = "Bundle of Perceval backends for Mozilla ecosystem"
+version = "0.3.0"
+description = "Bundle of Perceval backends for Mozilla ecosystem."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-grimoirelab-toolkit = ">=0.1.0"
-perceval = ">=0.12.12"
-requests = ">=2.7.0"
+grimoirelab-toolkit = ">=0.3,<0.4"
+perceval = ">=0.18,<0.19"
+requests = ">=2.7.0,<3.0.0"
 
 [[package]]
 name = "perceval-opnfv"
-version = "0.1.22"
-description = "Bundle of Perceval backends for OPNFV ecosystem"
+version = "0.2.0"
+description = "Bundle of Perceval backends for OPNFV ecosystem."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-grimoirelab-toolkit = ">=0.1.9"
-perceval = ">=0.12.12"
-requests = ">=2.7.0"
+grimoirelab-toolkit = ">=0.3,<0.4"
+perceval = ">=0.18,<0.19"
+requests = ">=2.7.0,<3.0.0"
 
 [[package]]
 name = "perceval-puppet"
-version = "0.1.21"
-description = "Bundle of Perceval backends for Puppet, Inc. ecosystem"
+version = "0.2.0"
+description = "Bundle of Perceval backends for Puppet, Inc. ecosystem."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-grimoirelab-toolkit = ">=0.1.9"
-perceval = ">=0.12.12"
-requests = ">=2.7.0"
+grimoirelab-toolkit = ">=0.3,<0.4"
+perceval = ">=0.18,<0.19"
+requests = ">=2.7.0,<3.0.0"
 
 [[package]]
 name = "perceval-weblate"
-version = "0.1.3"
-description = "Bundle of Perceval backends for Weblate"
+version = "0.2.0"
+description = "Bundle of Perceval backends for Weblate."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-grimoirelab-toolkit = ">=0.1.12"
-perceval = ">=0.17.1"
-requests = ">=2.7.0"
+grimoirelab-toolkit = ">=0.3,<0.4"
+perceval = ">=0.18,<0.19"
+requests = ">=2.7.0,<3.0.0"
 
 [[package]]
 name = "platformdirs"
@@ -872,8 +874,8 @@ beautifulsoup4 = [
     {file = "beautifulsoup4-4.11.1.tar.gz", hash = "sha256:ad9aa55b65ef2808eb405f46cf74df7fcb7044d5cbc26487f96eb2ef2e436693"},
 ]
 cereslib = [
-    {file = "cereslib-0.2.0-py3-none-any.whl", hash = "sha256:da4c0873a13540d66713299994ba98b8ccc3297daea3c504c623b095772020a3"},
-    {file = "cereslib-0.2.0.tar.gz", hash = "sha256:195d584067ad5df815baa9be8a15fe58c89878be74b8e4cbeba4fdf9db203001"},
+    {file = "cereslib-0.1.16-py3-none-any.whl", hash = "sha256:9b609d72bce03b253b2011b02224d4cc07920efa77afcb3c32f10ef35722ef5d"},
+    {file = "cereslib-0.1.16.tar.gz", hash = "sha256:bde4ae6df57c79ffe5c364878fd1e6ce69f2f99177334eaf007c74b9329e94f4"},
 ]
 certifi = [
     {file = "certifi-2022.5.18.1-py3-none-any.whl", hash = "sha256:f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"},
@@ -994,28 +996,25 @@ coverage = [
     {file = "coverage-5.5.tar.gz", hash = "sha256:ebe78fe9a0e874362175b02371bdfbee64d8edc42a044253ddf4ee7d3c15212c"},
 ]
 cryptography = [
-    {file = "cryptography-37.0.2-cp36-abi3-macosx_10_10_universal2.whl", hash = "sha256:ef15c2df7656763b4ff20a9bc4381d8352e6640cfeb95c2972c38ef508e75181"},
-    {file = "cryptography-37.0.2-cp36-abi3-macosx_10_10_x86_64.whl", hash = "sha256:3c81599befb4d4f3d7648ed3217e00d21a9341a9a688ecdd615ff72ffbed7336"},
-    {file = "cryptography-37.0.2-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:2bd1096476aaac820426239ab534b636c77d71af66c547b9ddcd76eb9c79e004"},
-    {file = "cryptography-37.0.2-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_24_aarch64.whl", hash = "sha256:31fe38d14d2e5f787e0aecef831457da6cec68e0bb09a35835b0b44ae8b988fe"},
-    {file = "cryptography-37.0.2-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:093cb351031656d3ee2f4fa1be579a8c69c754cf874206be1d4cf3b542042804"},
-    {file = "cryptography-37.0.2-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:59b281eab51e1b6b6afa525af2bd93c16d49358404f814fe2c2410058623928c"},
-    {file = "cryptography-37.0.2-cp36-abi3-manylinux_2_24_x86_64.whl", hash = "sha256:0cc20f655157d4cfc7bada909dc5cc228211b075ba8407c46467f63597c78178"},
-    {file = "cryptography-37.0.2-cp36-abi3-musllinux_1_1_aarch64.whl", hash = "sha256:f8ec91983e638a9bcd75b39f1396e5c0dc2330cbd9ce4accefe68717e6779e0a"},
-    {file = "cryptography-37.0.2-cp36-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:46f4c544f6557a2fefa7ac8ac7d1b17bf9b647bd20b16decc8fbcab7117fbc15"},
-    {file = "cryptography-37.0.2-cp36-abi3-win32.whl", hash = "sha256:731c8abd27693323b348518ed0e0705713a36d79fdbd969ad968fbef0979a7e0"},
-    {file = "cryptography-37.0.2-cp36-abi3-win_amd64.whl", hash = "sha256:471e0d70201c069f74c837983189949aa0d24bb2d751b57e26e3761f2f782b8d"},
-    {file = "cryptography-37.0.2-pp37-pypy37_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a68254dd88021f24a68b613d8c51d5c5e74d735878b9e32cc0adf19d1f10aaf9"},
-    {file = "cryptography-37.0.2-pp37-pypy37_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:a7d5137e556cc0ea418dca6186deabe9129cee318618eb1ffecbd35bee55ddc1"},
-    {file = "cryptography-37.0.2-pp38-pypy38_pp73-macosx_10_10_x86_64.whl", hash = "sha256:aeaba7b5e756ea52c8861c133c596afe93dd716cbcacae23b80bc238202dc023"},
-    {file = "cryptography-37.0.2-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:95e590dd70642eb2079d280420a888190aa040ad20f19ec8c6e097e38aa29e06"},
-    {file = "cryptography-37.0.2-pp38-pypy38_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:1b9362d34363f2c71b7853f6251219298124aa4cc2075ae2932e64c91a3e2717"},
-    {file = "cryptography-37.0.2-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:e53258e69874a306fcecb88b7534d61820db8a98655662a3dd2ec7f1afd9132f"},
-    {file = "cryptography-37.0.2-pp39-pypy39_pp73-macosx_10_10_x86_64.whl", hash = "sha256:1f3bfbd611db5cb58ca82f3deb35e83af34bb8cf06043fa61500157d50a70982"},
-    {file = "cryptography-37.0.2-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:419c57d7b63f5ec38b1199a9521d77d7d1754eb97827bbb773162073ccd8c8d4"},
-    {file = "cryptography-37.0.2-pp39-pypy39_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:dc26bb134452081859aa21d4990474ddb7e863aa39e60d1592800a8865a702de"},
-    {file = "cryptography-37.0.2-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:3b8398b3d0efc420e777c40c16764d6870bcef2eb383df9c6dbb9ffe12c64452"},
-    {file = "cryptography-37.0.2.tar.gz", hash = "sha256:f224ad253cc9cea7568f49077007d2263efa57396a2f2f78114066fd54b5c68e"},
+    {file = "cryptography-3.4.8-cp36-abi3-macosx_10_10_x86_64.whl", hash = "sha256:a00cf305f07b26c351d8d4e1af84ad7501eca8a342dedf24a7acb0e7b7406e14"},
+    {file = "cryptography-3.4.8-cp36-abi3-macosx_11_0_arm64.whl", hash = "sha256:f44d141b8c4ea5eb4dbc9b3ad992d45580c1d22bf5e24363f2fbf50c2d7ae8a7"},
+    {file = "cryptography-3.4.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:0a7dcbcd3f1913f664aca35d47c1331fce738d44ec34b7be8b9d332151b0b01e"},
+    {file = "cryptography-3.4.8-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:34dae04a0dce5730d8eb7894eab617d8a70d0c97da76b905de9efb7128ad7085"},
+    {file = "cryptography-3.4.8-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1eb7bb0df6f6f583dd8e054689def236255161ebbcf62b226454ab9ec663746b"},
+    {file = "cryptography-3.4.8-cp36-abi3-manylinux_2_24_x86_64.whl", hash = "sha256:9965c46c674ba8cc572bc09a03f4c649292ee73e1b683adb1ce81e82e9a6a0fb"},
+    {file = "cryptography-3.4.8-cp36-abi3-musllinux_1_1_aarch64.whl", hash = "sha256:3c4129fc3fdc0fa8e40861b5ac0c673315b3c902bbdc05fc176764815b43dd1d"},
+    {file = "cryptography-3.4.8-cp36-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:695104a9223a7239d155d7627ad912953b540929ef97ae0c34c7b8bf30857e89"},
+    {file = "cryptography-3.4.8-cp36-abi3-win32.whl", hash = "sha256:21ca464b3a4b8d8e86ba0ee5045e103a1fcfac3b39319727bc0fc58c09c6aff7"},
+    {file = "cryptography-3.4.8-cp36-abi3-win_amd64.whl", hash = "sha256:3520667fda779eb788ea00080124875be18f2d8f0848ec00733c0ec3bb8219fc"},
+    {file = "cryptography-3.4.8-pp36-pypy36_pp73-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:d2a6e5ef66503da51d2110edf6c403dc6b494cc0082f85db12f54e9c5d4c3ec5"},
+    {file = "cryptography-3.4.8-pp36-pypy36_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a305600e7a6b7b855cd798e00278161b681ad6e9b7eca94c721d5f588ab212af"},
+    {file = "cryptography-3.4.8-pp36-pypy36_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:3fa3a7ccf96e826affdf1a0a9432be74dc73423125c8f96a909e3835a5ef194a"},
+    {file = "cryptography-3.4.8-pp37-pypy37_pp73-macosx_10_10_x86_64.whl", hash = "sha256:d9ec0e67a14f9d1d48dd87a2531009a9b251c02ea42851c060b25c782516ff06"},
+    {file = "cryptography-3.4.8-pp37-pypy37_pp73-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:5b0fbfae7ff7febdb74b574055c7466da334a5371f253732d7e2e7525d570498"},
+    {file = "cryptography-3.4.8-pp37-pypy37_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:94fff993ee9bc1b2440d3b7243d488c6a3d9724cc2b09cdb297f6a886d040ef7"},
+    {file = "cryptography-3.4.8-pp37-pypy37_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:8695456444f277af73a4877db9fc979849cd3ee74c198d04fc0776ebc3db52b9"},
+    {file = "cryptography-3.4.8-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:cd65b60cfe004790c795cc35f272e41a3df4631e2fb6b35aa7ac6ef2859d554e"},
+    {file = "cryptography-3.4.8.tar.gz", hash = "sha256:94cc5ed4ceaefcbe5bf38c8fba6a21fc1d365bb8fb826ea1688e3370b2e24a1c"},
 ]
 dill = [
     {file = "dill-0.3.5.1-py2.py3-none-any.whl", hash = "sha256:33501d03270bbe410c72639b350e941882a8b0fd55357580fbc873fba0c59302"},
@@ -1081,8 +1080,8 @@ graal = [
     {file = "graal-0.2.9.tar.gz", hash = "sha256:251d40c75508e66b845df546810b06d21a0f0151bfe40b5c417a35de2487d5cb"},
 ]
 grimoirelab-toolkit = [
-    {file = "grimoirelab-toolkit-0.2.0.tar.gz", hash = "sha256:0082a4ec3cfc54784ebb632930aa4a39508ec9906c5eabcf5bfe1805b744af35"},
-    {file = "grimoirelab_toolkit-0.2.0-py3-none-any.whl", hash = "sha256:7a097fe59c6b9a94d7d7fcdbbcb2a5ec3c8ed6e37811eb29a54ac665ddcd2dce"},
+    {file = "grimoirelab-toolkit-0.3.0.tar.gz", hash = "sha256:8d443d4047e18cc858fcfdcd9143c5d54444e7a6355e36fe26818e0125b576ae"},
+    {file = "grimoirelab_toolkit-0.3.0-py3-none-any.whl", hash = "sha256:604698d8a06acfe61d89c86b2230c6b10e3a60b5b549cfa17d7bce3e9b45b935"},
 ]
 httpretty = [
     {file = "httpretty-0.9.7.tar.gz", hash = "sha256:66216f26b9d2c52e81808f3e674a6fb65d4bf719721394a1a9be926177e55fbe"},
@@ -1253,24 +1252,24 @@ pbr = [
     {file = "pbr-5.9.0.tar.gz", hash = "sha256:e8dca2f4b43560edef58813969f52a56cef023146cbb8931626db80e6c1c4308"},
 ]
 perceval = [
-    {file = "perceval-0.17.17-py3-none-any.whl", hash = "sha256:a5b2d75fd551f4aeb610acbaf3374d5b60b56b434a726500cffe80de92896e7c"},
-    {file = "perceval-0.17.17.tar.gz", hash = "sha256:b0443e0100f23b02235f83c45910cb74e0e543f15db876f9e71c46aacf216938"},
+    {file = "perceval-0.18.0-py3-none-any.whl", hash = "sha256:280da166ccd44c6d34df192079ca7b214c0f9bef81c58a197fef455b981a3a77"},
+    {file = "perceval-0.18.0.tar.gz", hash = "sha256:d66ec4c1ccc8c9241e802d9b5e42a7bb8caf4ccf84afdfa2e46efe70bf0371b6"},
 ]
 perceval-mozilla = [
-    {file = "perceval-mozilla-0.2.15.tar.gz", hash = "sha256:579db126383ecb67f60beba9db966bceca2dd6f5830fc500da0655df6c832701"},
-    {file = "perceval_mozilla-0.2.15-py3-none-any.whl", hash = "sha256:b6c4556112c7f633388ef20aae7499e029cb9c54f665261e5346d6ff51f4bca5"},
+    {file = "perceval-mozilla-0.3.0.tar.gz", hash = "sha256:d6edee166791bb1f435a755ea4c845bfab1b39290c1fc0cf69d58b773014c83f"},
+    {file = "perceval_mozilla-0.3.0-py3-none-any.whl", hash = "sha256:9d2e9ea7e6ab5713fde0ff25427ceae30eba55bbf8de6912f984a4f74cf979cc"},
 ]
 perceval-opnfv = [
-    {file = "perceval-opnfv-0.1.22.tar.gz", hash = "sha256:2b958326aec76b3b3d3f3be6ee8332f8d63519bf7d0c844a57cd751281d22514"},
-    {file = "perceval_opnfv-0.1.22-py3-none-any.whl", hash = "sha256:c0ecc66f97f522ba61cedd989d277141b904bf46472968301026d4bb5a34839f"},
+    {file = "perceval-opnfv-0.2.0.tar.gz", hash = "sha256:83a7e5c97caa28987cadad85d7c41de0798479bf59ff378973e2f2cdbd589e56"},
+    {file = "perceval_opnfv-0.2.0-py3-none-any.whl", hash = "sha256:79746689054d9f0f57c79ee59b8be7f1a5688969824607ebb6b51ed700613ab5"},
 ]
 perceval-puppet = [
-    {file = "perceval-puppet-0.1.21.tar.gz", hash = "sha256:9cf897b05eff02df5db27a3a167122f1b8a30b58d6a059ff785364491ba120a8"},
-    {file = "perceval_puppet-0.1.21-py3-none-any.whl", hash = "sha256:42aae9f25fe29ab540051ebf6cd952be29589cb813ffe6f32750b3dbff9e6299"},
+    {file = "perceval-puppet-0.2.0.tar.gz", hash = "sha256:bda66d7a50ae34fa10d72501ed3bab655fcb1b662c5f3c3d0cdf13d498271ace"},
+    {file = "perceval_puppet-0.2.0-py3-none-any.whl", hash = "sha256:acd17a20f6797a97c3825cff51977834074362c1cc5b83f5897827032346d579"},
 ]
 perceval-weblate = [
-    {file = "perceval-weblate-0.1.3.tar.gz", hash = "sha256:bba611cd00a51ec64103cd553e91ae3e4eb547c691a9f2055705e7c5f72b38dc"},
-    {file = "perceval_weblate-0.1.3-py3-none-any.whl", hash = "sha256:70640d150b8674eac5198130e82d1e461c6265542f6bb2fa29f2a5c317bb5160"},
+    {file = "perceval-weblate-0.2.0.tar.gz", hash = "sha256:7a77426240e56d70d8a474023cdd7580e79e01ebef65c4971e4dc020e7040c7c"},
+    {file = "perceval_weblate-0.2.0-py3-none-any.whl", hash = "sha256:12f81d51a70421418120abaf5196c9cf75bc439880cbf8fb7984a73bbd802577"},
 ]
 platformdirs = [
     {file = "platformdirs-2.5.2-py3-none-any.whl", hash = "sha256:027d8e83a2d7de06bbac4e5ef7e023c02b863d7ea5d079477e722bb41ab25788"},
