@@ -87,4 +87,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd tests
-        poetry run test_sortinghat_gelk.py
+        poetry run python test_sortinghat_gelk.py
