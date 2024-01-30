@@ -87,6 +87,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd tests
-        poetry run coverage run --source=grimoire_elk run_tests.py
-    - name: Coveralls
-      uses: coverallsapp/github-action@f350da2c033043742f89e8c0b7b5145a1616da6d # v2.1.2
+        poetry run test_sortinghat_gelk.py
