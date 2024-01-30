@@ -106,6 +106,8 @@ class TestSortinghatGelk(unittest.TestCase):
         db_verify_ssl = config.getboolean('Database', 'verify_ssl', fallback=True)
         db_tenant = config.get('Database', 'tenant', fallback=None)
 
+        logging.error(db_user, db_password, db_host, db_port, db_path, db_ssl, db_verify_ssl, db_tenant)
+
         self.sh_db = SortingHatClient(host=db_host,
                                       port=db_port,
                                       user=db_user,
@@ -118,6 +120,7 @@ class TestSortinghatGelk(unittest.TestCase):
         # Clean database
         # Remove identities
         entities = SortingHat.unique_identities(self.sh_db)
+        logging.error(entities)
         if entities:
             mks = [e['mk'] for e in entities]
             for i in mks:
@@ -135,6 +138,9 @@ class TestSortinghatGelk(unittest.TestCase):
         data = json.loads(read_file("data/task-identities-data.json"))
 
         identities = data['identities']
+        logging.error(self.sh_db.gqlc.base_headers)
+        logging.error(self.sh_db.gqlc.auth)
+        logging.error(self.sh_db.gqlc.session)
         for identity in identities:
             self.add_identity(self.sh_db, identity)
 
