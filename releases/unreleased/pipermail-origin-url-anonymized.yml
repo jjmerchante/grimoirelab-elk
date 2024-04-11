@@ -1,0 +1,7 @@
+---
+title: Pipermail origin URL anonymized
+category: fixed
+author: Jose Javier Merchante <jjmerchante@bitergia.com>
+issue: null
+notes: >
+  Remove credentials from Pipermail origin URL and tag fields.
