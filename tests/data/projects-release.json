@@ -82,9 +82,6 @@
         "mozillaclub": [
             "https://spreadsheets.google.com/feeds/cells/1QHl2bjBhMslyFzR5XXPzMLdzzx7oeSKTbgR5PM8qp64/ohaibtm/public/values?alt=json"
         ],
-        "nntp": [
-            "news.mozilla.org mozilla.dev.project-link"
-        ],
         "phabricator": [
             "https://phabricator.wikimedia.org"
         ],

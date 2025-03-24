@@ -62,7 +62,6 @@ Each enriched index includes one or more types of documents, which are summarize
 - **Mediawiki**: each document corresponds to a review.
 - **Meetup**: each document can be either an event, a rsvp or a comment.
 - **Mozillaclub**: each document includes event information.
-- **Nttp**: each document corresponds to a message.
 - **Onion Study/Community Structure**: each document corresponds to an author in a specific quarter, split by organization and project. That means we have an entry for the author’s overall contributions in a given quarter, one entry for the author in each one of the projects he contributed to in that quarter and the same for the author in each of the organizations he is affiliated to in that quarter. This way we store results of onion analysis computed overall, by project and by organization
 - **Pagure**: each document corresponds to an issue.
 - **Phabricator**: each document corresponds to a task.
